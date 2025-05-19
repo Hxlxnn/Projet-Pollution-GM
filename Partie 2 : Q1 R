@@ -24,7 +24,7 @@ graph_df <- metro_df %>%
 
 write_csv(graph_df, "graphe_metro.csv")
 
-# maintenant on va créer un objet graphe avec igraph
+# maintenant on va créer un objet graphe avec igraph pour visualiser 
 edges_df <- graph_df %>% select(station1, station2)
 metro_graph <- graph_from_data_frame(edges_df, directed = TRUE)
 
