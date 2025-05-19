@@ -1,0 +1,389 @@
+station1,station2,connecte
+Argentine,Bastille,True
+Bastille,Bérault,True
+Bérault,Champs-Elysées - Clemenceau,True
+Champs-Elysées - Clemenceau,Charles de Gaulle - Etoile,True
+Charles de Gaulle - Etoile,Château de Vincennes,True
+Château de Vincennes,Châtelet,True
+Châtelet,Concorde,True
+Concorde,Esplanade de la Défense,True
+Esplanade de la Défense,Franklin D. Roosevelt,True
+Franklin D. Roosevelt,Gare de Lyon,True
+Gare de Lyon,George V,True
+George V,Hôtel de Ville,True
+Hôtel de Ville,La Défense (Grande Arche),True
+La Défense (Grande Arche),Les Sablons,True
+Les Sablons,Louvre - Rivoli,True
+Louvre - Rivoli,Nation,True
+Nation,Palais Royal - Musée du Louvre,True
+Palais Royal - Musée du Louvre,Pont de Neuilly,True
+Pont de Neuilly,Porte Maillot,True
+Porte Maillot,Porte de Vincennes,True
+Porte de Vincennes,Reuilly - Diderot,True
+Reuilly - Diderot,Saint-Mandé,True
+Saint-Mandé,Saint-Paul (Le Marais),True
+Saint-Paul (Le Marais),Tuileries,True
+Avenue Emile Zola,Boulogne Jean Jaurès,True
+Boulogne Jean Jaurès,Boulogne Pont de Saint-Cloud,True
+Boulogne Pont de Saint-Cloud,Cardinal Lemoine,True
+Cardinal Lemoine,Chardon Lagache,True
+Chardon Lagache,Charles Michels,True
+Charles Michels,Cluny - La Sorbonne,True
+Cluny - La Sorbonne,Duroc,True
+Duroc,Eglise d'Auteuil,True
+Eglise d'Auteuil,Gare d'Austerlitz,True
+Gare d'Austerlitz,Javel - André Citroën,True
+Javel - André Citroën,Jussieu,True
+Jussieu,La Motte-Picquet - Grenelle,True
+La Motte-Picquet - Grenelle,Mabillon,True
+Mabillon,Maubert - Mutualité,True
+Maubert - Mutualité,Michel-Ange - Auteuil,True
+Michel-Ange - Auteuil,Michel-Ange - Molitor,True
+Michel-Ange - Molitor,Mirabeau,True
+Mirabeau,Odéon,True
+Odéon,Porte d'Auteuil,True
+Porte d'Auteuil,Sèvres - Babylone,True
+Sèvres - Babylone,Ségur,True
+Ségur,Vaneau,True
+Arts et Métiers,Belleville,True
+Belleville,Châtelet,True
+Châtelet,Coteaux Beauclair,True
+Coteaux Beauclair,Goncourt,True
+Goncourt,Hôtel de Ville,True
+Hôtel de Ville,Jourdain,True
+Jourdain,La Dhuys,True
+La Dhuys,Mairie des Lilas,True
+Mairie des Lilas,Montreuil - Hôpital,True
+Montreuil - Hôpital,Place des Fêtes,True
+Place des Fêtes,Porte des Lilas,True
+Porte des Lilas,Pyrénées,True
+Pyrénées,Rambuteau,True
+Rambuteau,Romainville-Carnot,True
+Romainville-Carnot,Rosny-Bois-Perrier,True
+Rosny-Bois-Perrier,République,True
+République,Serge Gainsbourg,True
+Serge Gainsbourg,Télégraphe,True
+Abbesses,Aimé Césaire,True
+Aimé Césaire,Assemblée Nationale,True
+Assemblée Nationale,Concorde,True
+Concorde,Convention,True
+Convention,Corentin Celton,True
+Corentin Celton,Falguière,True
+Falguière,Front Populaire,True
+Front Populaire,Jules Joffrin,True
+Jules Joffrin,Lamarck - Caulaincourt,True
+Lamarck - Caulaincourt,Madeleine,True
+Madeleine,Mairie d'Aubervilliers,True
+Mairie d'Aubervilliers,Mairie d'Issy,True
+Mairie d'Issy,Marcadet - Poissonniers,True
+Marcadet - Poissonniers,Marx Dormoy,True
+Marx Dormoy,Montparnasse Bienvenue,True
+Montparnasse Bienvenue,Notre-Dame des Champs,True
+Notre-Dame des Champs,Notre-Dame-de-Lorette,True
+Notre-Dame-de-Lorette,Pasteur,True
+Pasteur,Pigalle,True
+Pigalle,Porte de Versailles,True
+Porte de Versailles,Porte de la Chapelle,True
+Porte de la Chapelle,Rennes,True
+Rennes,Rue du Bac,True
+Rue du Bac,Saint-Georges,True
+Saint-Georges,Saint-Lazare,True
+Saint-Lazare,Solférino,True
+Solférino,Sèvres - Babylone,True
+Sèvres - Babylone,Trinité - d'Estienne d'Orves,True
+Trinité - d'Estienne d'Orves,Vaugirard,True
+Vaugirard,Volontaires,True
+Asnières - Gennevilliers Les Courtilles,Basilique de Saint-Denis,True
+Basilique de Saint-Denis,Brochant,True
+Brochant,Carrefour Pleyel,True
+Carrefour Pleyel,Champs-Elysées - Clemenceau,True
+Champs-Elysées - Clemenceau,Châtillon-Montrouge,True
+Châtillon-Montrouge,Duroc,True
+Duroc,Gabriel Péri,True
+Gabriel Péri,Garibaldi,True
+Garibaldi,Gaîté,True
+Gaîté,Guy Môquet,True
+Guy Môquet,Invalides,True
+Invalides,La Fourche,True
+La Fourche,Les Agnettes,True
+Les Agnettes,Liège,True
+Liège,Mairie de Clichy,True
+Mairie de Clichy,Mairie de Saint-Ouen,True
+Mairie de Saint-Ouen,Malakoff - Plateau de Vanves,True
+Malakoff - Plateau de Vanves,Malakoff - Rue Etienne Dolet,True
+Malakoff - Rue Etienne Dolet,Miromesnil,True
+Miromesnil,Montparnasse Bienvenue,True
+Montparnasse Bienvenue,Pernety,True
+Pernety,Place de Clichy,True
+Place de Clichy,Plaisance,True
+Plaisance,Porte de Clichy,True
+Porte de Clichy,Porte de Saint-Ouen,True
+Porte de Saint-Ouen,Porte de Vanves,True
+Porte de Vanves,Saint-Denis - Porte de Paris,True
+Saint-Denis - Porte de Paris,Saint-Denis - Université,True
+Saint-Denis - Université,Saint-François-Xavier,True
+Saint-François-Xavier,Saint-Lazare,True
+Saint-Lazare,Varenne,True
+Aéroport d'Orly,Bercy,True
+Bercy,Bibliothèque François Mitterrand,True
+Bibliothèque François Mitterrand,Chevilly-Larue (Marché International),True
+Chevilly-Larue (Marché International),Châtelet,True
+Châtelet,Cour Saint-Emilion,True
+Cour Saint-Emilion,Gare de Lyon,True
+Gare de Lyon,Hôpital Bicêtre,True
+Hôpital Bicêtre,L'Haÿ-les-Roses,True
+L'Haÿ-les-Roses,Madeleine,True
+Madeleine,Mairie de Saint-Ouen,True
+Mairie de Saint-Ouen,Maison Blanche,True
+Maison Blanche,Olympiades,True
+Olympiades,Pont Cardinet,True
+Pont Cardinet,Porte de Clichy,True
+Porte de Clichy,Pyramides,True
+Pyramides,Saint-Denis - Pleyel,True
+Saint-Denis - Pleyel,Saint-Lazare,True
+Saint-Lazare,Saint-Ouen,True
+Saint-Ouen,Thiais - Orly (Pont de Rungis),True
+Alexandre Dumas,Anvers,True
+Anvers,Avron,True
+Avron,Barbès - Rochechouart,True
+Barbès - Rochechouart,Belleville,True
+Belleville,Blanche,True
+Blanche,Charles de Gaulle - Etoile,True
+Charles de Gaulle - Etoile,Colonel Fabien,True
+Colonel Fabien,Courcelles,True
+Courcelles,Couronnes,True
+Couronnes,Jaurès,True
+Jaurès,La Chapelle,True
+La Chapelle,Monceau,True
+Monceau,Ménilmontant,True
+Ménilmontant,Nation,True
+Nation,Philippe Auguste,True
+Philippe Auguste,Pigalle,True
+Pigalle,Place de Clichy,True
+Place de Clichy,Porte Dauphine,True
+Porte Dauphine,Père Lachaise,True
+Père Lachaise,Rome,True
+Rome,Stalingrad,True
+Stalingrad,Ternes,True
+Ternes,Victor Hugo,True
+Victor Hugo,Villiers,True
+Anatole France,Arts et Métiers,True
+Arts et Métiers,Bourse,True
+Bourse,Europe,True
+Europe,Gallieni,True
+Gallieni,Gambetta,True
+Gambetta,Havre-Caumartin,True
+Havre-Caumartin,Louise Michel,True
+Louise Michel,Malesherbes,True
+Malesherbes,Opéra,True
+Opéra,Parmentier,True
+Parmentier,Pereire,True
+Pereire,Pont de Levallois - Bécon,True
+Pont de Levallois - Bécon,Porte de Bagnolet,True
+Porte de Bagnolet,Porte de Champerret,True
+Porte de Champerret,Père Lachaise,True
+Père Lachaise,Quatre Septembre,True
+Quatre Septembre,Rue Saint-Maur,True
+Rue Saint-Maur,Réaumur - Sébastopol,True
+Réaumur - Sébastopol,République,True
+République,Saint-Lazare,True
+Saint-Lazare,Sentier,True
+Sentier,Temple,True
+Temple,Villiers,True
+Villiers,Wagram,True
+Gambetta,Pelleport,True
+Pelleport,Porte des Lilas,True
+Porte des Lilas,Saint-Fargeau,True
+Alésia,Bagneux - Lucie Aubrac,True
+Bagneux - Lucie Aubrac,Barbara,True
+Barbara,Barbès - Rochechouart,True
+Barbès - Rochechouart,Château Rouge,True
+Château Rouge,Château d'Eau,True
+Château d'Eau,Châtelet,True
+Châtelet,Cité,True
+Cité,Denfert-Rochereau,True
+Denfert-Rochereau,Etienne Marcel,True
+Etienne Marcel,Gare de l'Est,True
+Gare de l'Est,Gare du Nord,True
+Gare du Nord,Les Halles,True
+Les Halles,Mairie de Montrouge,True
+Mairie de Montrouge,Marcadet - Poissonniers,True
+Marcadet - Poissonniers,Montparnasse Bienvenue,True
+Montparnasse Bienvenue,Mouton-Duvernet,True
+Mouton-Duvernet,Odéon,True
+Odéon,Porte d'Orléans,True
+Porte d'Orléans,Porte de Clignancourt,True
+Porte de Clignancourt,Raspail,True
+Raspail,Réaumur - Sébastopol,True
+Réaumur - Sébastopol,Saint-Germain-des-Prés,True
+Saint-Germain-des-Prés,Saint-Michel,True
+Saint-Michel,Saint-Placide,True
+Saint-Placide,Saint-Sulpice,True
+Saint-Sulpice,Simplon,True
+Simplon,Strasbourg - Saint-Denis,True
+Strasbourg - Saint-Denis,Vavin,True
+Bastille,Bobigny Pablo Picasso,True
+Bobigny Pablo Picasso,Bobigny-Pantin - Raymond Queneau,True
+Bobigny-Pantin - Raymond Queneau,Bréguet-Sabin,True
+Bréguet-Sabin,Campo-Formio,True
+Campo-Formio,Eglise de Pantin,True
+Eglise de Pantin,Gare d'Austerlitz,True
+Gare d'Austerlitz,Gare de l'Est,True
+Gare de l'Est,Gare du Nord,True
+Gare du Nord,Hoche,True
+Hoche,Jacques Bonsergent,True
+Jacques Bonsergent,Jaurès,True
+Jaurès,Laumière,True
+Laumière,Oberkampf,True
+Oberkampf,Ourcq,True
+Ourcq,Place d'Italie,True
+Place d'Italie,Porte de Pantin,True
+Porte de Pantin,Quai de la Rapée,True
+Quai de la Rapée,Richard-Lenoir,True
+Richard-Lenoir,République,True
+République,Saint-Marcel,True
+Saint-Marcel,Stalingrad,True
+Bel-Air,Bercy,True
+Bercy,Bir-Hakeim,True
+Bir-Hakeim,Boissière,True
+Boissière,Cambronne,True
+Cambronne,Charles de Gaulle - Etoile,True
+Charles de Gaulle - Etoile,Chevaleret,True
+Chevaleret,Corvisart,True
+Corvisart,Daumesnil,True
+Daumesnil,Denfert-Rochereau,True
+Denfert-Rochereau,Dugommier,True
+Dugommier,Dupleix,True
+Dupleix,Edgar Quinet,True
+Edgar Quinet,Glacière,True
+Glacière,Kléber,True
+Kléber,La Motte-Picquet - Grenelle,True
+La Motte-Picquet - Grenelle,Montparnasse Bienvenue,True
+Montparnasse Bienvenue,Nation,True
+Nation,Nationale,True
+Nationale,Passy,True
+Passy,Pasteur,True
+Pasteur,Picpus,True
+Picpus,Place d'Italie,True
+Place d'Italie,Quai de la Gare,True
+Quai de la Gare,Raspail,True
+Raspail,Saint-Jacques,True
+Saint-Jacques,Sèvres-Lecourbe,True
+Sèvres-Lecourbe,Trocadéro,True
+Aubervilliers-Pantin Quatre Chemins,Cadet,True
+Cadet,Censier - Daubenton,True
+Censier - Daubenton,Chaussée d'Antin - La Fayette,True
+Chaussée d'Antin - La Fayette,Château Landon,True
+Château Landon,Châtelet,True
+Châtelet,Corentin Cariou,True
+Corentin Cariou,Crimée,True
+Crimée,Fort d'Aubervilliers,True
+Fort d'Aubervilliers,Gare de l'Est,True
+Gare de l'Est,Jussieu,True
+Jussieu,La Courneuve - 8 Mai 1945,True
+La Courneuve - 8 Mai 1945,Le Kremlin-Bicêtre,True
+Le Kremlin-Bicêtre,Le Peletier,True
+Le Peletier,Les Gobelins,True
+Les Gobelins,Louis Blanc,True
+Louis Blanc,Mairie d'Ivry,True
+Mairie d'Ivry,Maison Blanche,True
+Maison Blanche,Opéra,True
+Opéra,Palais Royal - Musée du Louvre,True
+Palais Royal - Musée du Louvre,Pierre et Marie Curie,True
+Pierre et Marie Curie,Place Monge,True
+Place Monge,Place d'Italie,True
+Place d'Italie,Poissonnière,True
+Poissonnière,Pont Marie (Cité des Arts),True
+Pont Marie (Cité des Arts),Pont Neuf,True
+Pont Neuf,Porte d'Italie,True
+Porte d'Italie,Porte d'Ivry,True
+Porte d'Ivry,Porte de Choisy,True
+Porte de Choisy,Porte de la Villette,True
+Porte de la Villette,Pyramides,True
+Pyramides,Riquet,True
+Riquet,Stalingrad,True
+Stalingrad,Sully - Morland,True
+Sully - Morland,Tolbiac,True
+Tolbiac,Villejuif - Louis Aragon,True
+Villejuif - Louis Aragon,Villejuif Léo Lagrange,True
+Villejuif Léo Lagrange,Villejuif Paul Vaillant-Couturier,True
+Bolivar,Botzaris,True
+Botzaris,Buttes Chaumont,True
+Buttes Chaumont,Danube,True
+Danube,Jaurès,True
+Jaurès,Louis Blanc,True
+Louis Blanc,Place des Fêtes,True
+Place des Fêtes,Pré-Saint-Gervais,True
+Balard,Bastille,True
+Bastille,Bonne Nouvelle,True
+Bonne Nouvelle,Boucicaut,True
+Boucicaut,Charenton - Ecoles,True
+Charenton - Ecoles,Chemin Vert,True
+Chemin Vert,Commerce,True
+Commerce,Concorde,True
+Concorde,Créteil - L'Echat,True
+Créteil - L'Echat,Créteil - Préfecture,True
+Créteil - Préfecture,Créteil - Université,True
+Créteil - Université,Daumesnil,True
+Daumesnil,Ecole Militaire,True
+Ecole Militaire,Ecole Vétérinaire de Maisons-Alfort,True
+Ecole Vétérinaire de Maisons-Alfort,Faidherbe - Chaligny,True
+Faidherbe - Chaligny,Filles du Calvaire,True
+Filles du Calvaire,Félix Faure,True
+Félix Faure,Grands Boulevards,True
+Grands Boulevards,Invalides,True
+Invalides,La Motte-Picquet - Grenelle,True
+La Motte-Picquet - Grenelle,La Tour-Maubourg,True
+La Tour-Maubourg,Ledru-Rollin,True
+Ledru-Rollin,Liberté,True
+Liberté,Lourmel,True
+Lourmel,Madeleine,True
+Madeleine,Maisons-Alfort - Les Juilliottes,True
+Maisons-Alfort - Les Juilliottes,Maisons-Alfort - Stade,True
+Maisons-Alfort - Stade,Michel Bizot,True
+Michel Bizot,Montgallet,True
+Montgallet,Opéra,True
+Opéra,Pointe du Lac,True
+Pointe du Lac,Porte Dorée,True
+Porte Dorée,Porte de Charenton,True
+Porte de Charenton,Reuilly - Diderot,True
+Reuilly - Diderot,Richelieu - Drouot,True
+Richelieu - Drouot,République,True
+République,Saint-Sébastien - Froissart,True
+Saint-Sébastien - Froissart,Strasbourg - Saint-Denis,True
+Alma - Marceau,Billancourt,True
+Billancourt,Bonne Nouvelle,True
+Bonne Nouvelle,Buzenval,True
+Buzenval,Charonne,True
+Charonne,Chaussée d'Antin - La Fayette,True
+Chaussée d'Antin - La Fayette,Croix de Chavaux,True
+Croix de Chavaux,Exelmans,True
+Exelmans,Franklin D. Roosevelt,True
+Franklin D. Roosevelt,Grands Boulevards,True
+Grands Boulevards,Havre-Caumartin,True
+Havre-Caumartin,Iéna,True
+Iéna,Jasmin,True
+Jasmin,La Muette,True
+La Muette,Mairie de Montreuil,True
+Mairie de Montreuil,Maraîchers,True
+Maraîchers,Marcel Sembat,True
+Marcel Sembat,Michel-Ange - Auteuil,True
+Michel-Ange - Auteuil,Michel-Ange - Molitor,True
+Michel-Ange - Molitor,Miromesnil,True
+Miromesnil,Nation,True
+Nation,Oberkampf,True
+Oberkampf,Pont de Sèvres,True
+Pont de Sèvres,Porte de Montreuil,True
+Porte de Montreuil,Porte de Saint-Cloud,True
+Porte de Saint-Cloud,Ranelagh,True
+Ranelagh,Richelieu - Drouot,True
+Richelieu - Drouot,Robespierre,True
+Robespierre,Rue de la Pompe,True
+Rue de la Pompe,Rue des Boulets,True
+Rue des Boulets,République,True
+République,Saint-Ambroise,True
+Saint-Ambroise,Saint-Augustin,True
+Saint-Augustin,Saint-Philippe-du-Roule,True
+Saint-Philippe-du-Roule,Strasbourg - Saint-Denis,True
+Strasbourg - Saint-Denis,Trocadéro,True
+Trocadéro,Voltaire,True
