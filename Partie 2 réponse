@@ -1,1 +1,3 @@
-
+Q1 :  Il y a 388 ligne dans graphe_metro.csv et il fait 13,5 kB. On peut réduire cela en suprimant les connection qui sont en double avec le code :  graph_df <- graph_df %>%
+  mutate(key = pmin(station1, station2)) %>%
+  distinct(station1, station2, .keep_all = TRUE)
