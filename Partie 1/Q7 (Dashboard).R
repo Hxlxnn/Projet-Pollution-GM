@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(plotly)
 
-qualite <- read.table("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", header = TRUE, sep = ";", fill = TRUE, quote = "\"")
+qualite <- read.table("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", header = TRUE, sep = ";", quote = "\"")
 
 qualite_clean <- qualite %>%
   filter(rowSums(is.na(.)) != ncol(.)) %>%
@@ -15,7 +15,6 @@ qualite_clean <- qualite %>%
 qualite_metro <- qualite_clean %>%
   filter(grepl("Métro", Nom.de.la.ligne))
 
-# Traduire les niveaux de pollution en labels
 degres_pollution <- c("pollution faible" = 1, "pollution moyenne" = 2, "pollution élevée" = 3, "station aérienne" = NA)
 qualite_metro$niveau_pollution <- degres_pollution[qualite_metro$niveau_pollution]
 
@@ -46,7 +45,6 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
-  # Filtrer les données en fonction de la ligne sélectionnée
   filtered_data <- reactive({
     if (input$ligne_filter == "Toutes") {
       qualite_metro
@@ -55,7 +53,6 @@ server <- function(input, output, session) {
     }
   })
   
-  # Carte interactive
   output$map <- renderLeaflet({
     leaflet(filtered_data()) %>%
       addTiles() %>%
@@ -72,7 +69,6 @@ server <- function(input, output, session) {
       )
   })
   
-  # Barplot interactif
   output$barplot <- renderPlotly({
     p <- ggplot(filtered_data(), aes(x = Niveau_Label, fill = Niveau_Label)) +
       geom_bar() +
@@ -82,7 +78,6 @@ server <- function(input, output, session) {
     ggplotly(p)
   })
   
-  # Top stations polluées
   output$top_table <- renderTable({
     filtered_data() %>%
       filter(!grepl("pas de données", Nom.de.la.Station)) %>%
@@ -90,7 +85,6 @@ server <- function(input, output, session) {
       select(Nom.de.la.Station, Nom.de.la.ligne, Niveau_Label)
   })
   
-  # Résumé texte
   output$resume_text <- renderText({
     paste("Stations affichées :", nrow(filtered_data()), "\n",
           "Stations avec pollution élevée :", sum(filtered_data()$niveau_pollution == 3))
