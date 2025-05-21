@@ -29,8 +29,8 @@ knn_pred <- knn(train = train_data[, c("stop_lat", "stop_lon")],
                 cl = train_data$niveau_pollution,
                 k = k_value)
 
-accuracy <- mean(knn_pred == test_data$niveau_pollution)
-cat("L'exactitude du modèle est : ", round(accuracy, 4), "\n")
+accuracy <- sum(diag(conf_mat)) / length(test_data$niveau_pollution)
+sprintf("Accuracy: %.2f%%", accuracy * 100)
 
 conf_mat <- table(
   Predicted = factor(knn_pred, levels = levels(qualite_metro$niveau_pollution)),
