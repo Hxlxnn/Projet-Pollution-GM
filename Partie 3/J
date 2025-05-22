@@ -1,1 +1,44 @@
+library(igraph)
+library(Matrix)
+library(dplyr)
+library(ggplot2)
 
+pollution <- read.csv("qualite_metro.csv")
+graph_metro <- read.csv("graphe_metro.csv")
+
+g <- graph_from_data_frame(edges, directed = FALSE)
+pollution_clean <- subset(pollution, niveau_pollution != "station aérienne")
+pollution_clean$pollution_num <- as.numeric(factor(pollution_clean$niveau_pollution, levels = levels))
+
+V(g)$pollution <- pollution_clean$pollution_num[match(V(g)$name, pollution_clean$Nom.de.la.Station)]
+head(data.frame(station = V(g)$name, pollution = V(g)$pollution))
+L <- laplacian_matrix(g, sparse = FALSE)
+signal <- V(g)$pollution
+
+summary(signal)
+sommets_a_supprimer <- which(is.na(V(g)$pollution))
+
+eig <- eigen(L)
+valeurs_propres <- eig$values         
+vecteurs_propres <- eig$vectors 
+
+stations_polluees <- data.frame( station = V(g)$name,  pollution = V(g)$pollution )
+top10 <- stations_polluees[order(-stations_polluees$pollution), ][1:10, ]
+print(top10)
+
+t <- 1  # temps de diffusion
+filtre_chaleur <- exp(-t * valeurs_propres)
+
+# Signal après diffusion
+signal_diffuse <- vecteurs_propres %*% (filtre_chaleur * (t(vecteurs_propres) %*% signal))
+
+plot(signal_diffuse, type = "h", main = "Propagation de la pollution sur le graphe", xlab = "Station", ylab = "Pollution diffuse")
+
+ data.frame(stations_polluees$'station', pollution_diffuse = signal_diffuse) |>
+ arrange(desc(pollution_diffuse)) |>
+ head(10)
+
+ ggplot(pollution_clean, aes(x = stop_lon, y = stop_lat)) +
+   geom_point(color = "blue") +
+   ggtitle("Position des stations de métro") +
+   theme_minimal()
