@@ -20,6 +20,10 @@ summary(signal)
 sommets_a_supprimer <- which(is.na(V(g)$pollution))
 g <- delete_vertices(g, sommets_a_supprimer)
 
+L <- laplacian_matrix(g, sparse = FALSE)
+signal <- V(g)$pollution
+summary(signal)
+
 eig <- eigen(L)
 valeurs_propres <- eig$values         
 vecteurs_propres <- eig$vectors 
