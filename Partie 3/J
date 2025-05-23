@@ -38,6 +38,7 @@ filtre_chaleur <- exp(-t * valeurs_propres)
 # Signal après diffusion
 signal_diffuse <- vecteurs_propres %*% (filtre_chaleur * (t(vecteurs_propres) %*% signal))
 
+plot(signal, type = "h", main = "pollution sur le graphe", xlab = "Station", ylab = "Pollution")
 plot(signal_diffuse, type = "h", main = "Propagation de la pollution sur le graphe", xlab = "Station", ylab = "Pollution diffuse")
 
  data.frame(stations_polluees$'station', pollution_diffuse = signal_diffuse) |>
