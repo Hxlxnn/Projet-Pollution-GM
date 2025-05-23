@@ -8,6 +8,7 @@ graph_metro <- read.csv("graphe_metro.csv")
 
 g <- graph_from_data_frame(graph_metro, directed = FALSE)
 pollution_clean <- subset(pollution, niveau_pollution != "station aérienne")
+levels <- c("pollution faible", "pollution moyenne", "pollution élevée", "station aérienne")
 pollution_clean$pollution_num <- as.numeric(factor(pollution_clean$niveau_pollution, levels = levels))
 
 V(g)$pollution <- pollution_clean$pollution_num[match(V(g)$name, pollution_clean$Nom.de.la.Station)]
