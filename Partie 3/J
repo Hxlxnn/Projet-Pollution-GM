@@ -6,7 +6,7 @@ library(ggplot2)
 pollution <- read.csv("qualite_metro.csv")
 graph_metro <- read.csv("graphe_metro.csv")
 
-g <- graph_from_data_frame(edges, directed = FALSE)
+g <- graph_from_data_frame(graph_metro, directed = FALSE)
 pollution_clean <- subset(pollution, niveau_pollution != "station aérienne")
 pollution_clean$pollution_num <- as.numeric(factor(pollution_clean$niveau_pollution, levels = levels))
 
