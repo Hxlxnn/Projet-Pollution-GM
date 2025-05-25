@@ -34,10 +34,10 @@ plot(valeurs_propres, type = "b", main = "Spectre du graphe", xlab = "Indice", y
 k <- 10
 
 # Reconstruction du signal lissé à partir des premières composantes
-> U <- vecteurs_propres[, 1:k]  # les k premiers vecteurs propres
-> signal_proj <- U %*% (t(U) %*% signal)  # projection puis reconstruction
-> # Différence entre signal réel et signal lissé
-> anomalie <- abs(signal - signal_proj)
+U <- vecteurs_propres[, 1:k]  # les k premiers vecteurs propres
+signal_proj <- U %*% (t(U) %*% signal)  # projection puis reconstruction
+# Différence entre signal réel et signal lissé
+anomalie <- abs(signal - signal_proj)
 
 stations_anomalie <- data.frame(station = V(g)$name, pollution = signal, lisse = signal_proj, anomalie = anomalie)
 
