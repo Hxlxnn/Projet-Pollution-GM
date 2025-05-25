@@ -30,6 +30,12 @@ graph_complet <- couples_possibles %>%
 
 write_csv(graph_complet, "graphe_connexions_complet.csv")
 
+
+
+
+
+
+
 # Deuxième partie : création du graphe réel
 
 data <- read.csv("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", sep = ";", fileEncoding = "UTF-8")
@@ -59,9 +65,9 @@ write.csv(edges, "graphe_metro.csv", row.names = FALSE)
 # Visualisation
 library(igraph)
 
-data_graph <- read.csv("graphe_metro.csv")
+data_graph <- edges[, c("station1", "station2")]
+graph <- graph_from_data_frame(data_graph, directed = FALSE)
 
-graph <- graph_from_data_frame(data_graph[, c("station1", "station2")], directed = FALSE)
 
 disposition <- layout_with_fr(graph, niter = 5000, area = vcount(graph)^3)
 
@@ -74,6 +80,6 @@ plot(graph,
      vertex.label.font = 2,
      vertex.label.color = "black",
      vertex.label.cex = 0.6,
-     edge.color = "gray")
+     edge.color = "red")
 
 dev.off()
