@@ -78,7 +78,13 @@ plot(signal_diffuse, type = "h", main = "Propagation de la pollution sur le grap
  arrange(desc(pollution_diffuse)) |>
  head(10)
 
- ggplot(pollution_clean, aes(x = stop_lon, y = stop_lat)) +
-   geom_point(color = "blue") +
-   ggtitle("Position des stations de métro") +
-   theme_minimal()
+ ggplot(pollution, aes(x = stop_lon, y = stop_lat)) +
+      # Points des autres stations
+      geom_point(data = subset(pollution, niveau_pollution != "station aérienne"),
+                 color = "blue", size = 2) +
+      # Points des stations aériennes
+      geom_point(data = subset(pollution, niveau_pollution == "station aérienne"),
+                 color = "red", size = 3) +
+      labs(title = "Carte des stations du métro : stations aériennes en rouge",
+           x = "Longitude", y = "Latitude") +
+      theme_minimal()
