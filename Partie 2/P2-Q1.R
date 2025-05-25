@@ -31,37 +31,6 @@ graph_complet <- couples_possibles %>%
 write_csv(graph_complet, "graphe_connexions_complet.csv")
 
 
-
-
-
-
-
-# Deuxième partie : création du graphe réel
-
-data <- read.csv("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", sep = ";", fileEncoding = "UTF-8")
-data <- data[grepl("Métro", data$Nom.de.la.ligne), ]
-
-data_clean <- unique(data[, c("Nom.de.la.Station", "Nom.de.la.ligne")])
-
-edges <- data.frame()
-lignes <- unique(data_clean$Nom.de.la.ligne)
-
-for (ligne in lignes) {
-  stations <- unique(data_clean[data_clean$Nom.de.la.ligne == ligne, "Nom.de.la.Station"])
-  if (length(stations) >= 2) {
-    for (i in 1:(length(stations) - 1)) {
-      edges <- rbind(edges, data.frame(
-        station1 = stations[i],
-        station2 = stations[i + 1],
-        ligne = ligne,
-        stringsAsFactors = FALSE
-      ))
-    }
-  }
-}
-
-write.csv(edges, "graphe_metro.csv", row.names = FALSE)
-
 # Visualisation
 library(igraph)
 
