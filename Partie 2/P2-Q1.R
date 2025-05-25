@@ -31,9 +31,6 @@ graphe_complet <- couples_possibles %>%
 
 write_csv(graphe_complet, "graphe_connexions_complet.csv")
 
-library(igraph)
-g_complet <- graph_from_data_frame(graphe_complet, directed = FALSE)
-
 #Réduction possible ?
 # Oui, il est possible de réduire la taille du fichier en supprimant toutes les lignes où les couples de stations ne sont pas connectés (connecte=FALSE)
 # Ils ne sont pas nécessaires à la visualisation du graphe
