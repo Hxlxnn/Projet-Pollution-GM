@@ -31,12 +31,38 @@ graph_complet <- couples_possibles %>%
 write_csv(graph_complet, "graphe_connexions_complet.csv")
 
 
+# Deuxième partie : création du graphe réel
+
+data <- read.csv("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", sep = ";", fileEncoding = "UTF-8")
+data <- data[grepl("Métro", data$Nom.de.la.ligne), ]
+
+data_clean <- unique(data[, c("Nom.de.la.Station", "Nom.de.la.ligne")])
+
+edges <- data.frame()
+lignes <- unique(data_clean$Nom.de.la.ligne)
+
+for (ligne in lignes) {
+  stations <- unique(data_clean[data_clean$Nom.de.la.ligne == ligne, "Nom.de.la.Station"])
+  if (length(stations) >= 2) {
+    for (i in 1:(length(stations) - 1)) {
+      edges <- rbind(edges, data.frame(
+        station1 = stations[i],
+        station2 = stations[i + 1],
+        ligne = ligne,
+        stringsAsFactors = FALSE
+      ))
+    }
+  }
+}
+
+write.csv(edges, "graphe_metro.csv", row.names = FALSE)
+
 # Visualisation
 library(igraph)
 
-data_graph <- edges[, c("station1", "station2")]
-graph <- graph_from_data_frame(data_graph, directed = FALSE)
+data_graph <- read.csv("graphe_metro.csv")
 
+graph <- graph_from_data_frame(data_graph[, c("station1", "station2")], directed = FALSE)
 
 disposition <- layout_with_fr(graph, niter = 5000, area = vcount(graph)^3)
 
@@ -48,7 +74,7 @@ plot(graph,
      vertex.label = V(graph)$name,
      vertex.label.font = 2,
      vertex.label.color = "black",
-     vertex.label.cex = 0.6,
-     edge.color = "red")
+     vertex.label.cex = 0.5,
+     edge.color = "gray")
 
 dev.off()
