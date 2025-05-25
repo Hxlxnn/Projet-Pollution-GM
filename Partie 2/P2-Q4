@@ -1,0 +1,3 @@
+Une méthode algoritmique que nous pouvons utiliser pour détecter l’existance de cycle est un algorithme de deep first search qui a une complexité linéaire : O(V + E)
+où V = nombre de stations et E = connexions. Dans R avec le package igraph qu'il faut importer, il suffit d’utiliser la fonction : !is.dag(graph) qui renvoie TRUE si il ya un cycle dans graph (ce qui est le cas chez nous) donc elle est facile à implémenter ici ce qui est une raison derriere notre choix d'algorithme.De plus l'algorithme permet de mieux gerer les correspondances et de savoir si des stations font des cycles peut nous mettre la puce à l'oreille sur la quantité de polution plus élevé qu'il y auras dans les alentour contrairement à des stations exentré..
+
