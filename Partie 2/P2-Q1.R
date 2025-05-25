@@ -47,20 +47,63 @@ cat("Nombres de lignes du fichier:", nrow(graphe_complet), "lignes\n")
 # Oui, il est possible de réduire la taille du fichier en supprimant toutes les lignes où les couples de stations ne sont pas connectés (connecte=FALSE)
 # Ils ne sont pas nécessaires à la visualisation du graphe
 
-#### Visualisation du graphe
-install.packages("ggraph")
-install.packages("tidygraph")
-library(ggraph)
-library(tidygraph)
+#### Pour visualiser maintenant 
+# On va crer un autre csv qui lie les station qui sont connecté une à une pour facilité la creation du graph dans cette partie 
+df <- read.csv("qualite-de-lair-dans-le-reseau-de-transport-francilien (1).csv", sep = ";", fileEncoding = "UTF-8")
 
-# Nettoyer le graphe en ne gardant que les connexions valides (connecte=TRUE)
-g_connecte <- delete_edges(g_complet, E(g_complet)[which(!E(g_complet)$connecte)])
+# Garder uniquement les lignes de métro
+df <- df[grepl("Métro", df$Nom.de.la.ligne), ]
 
-# Convertir en tidygraph pour ggraph
-g_tidy <- as_tbl_graph(g_connecte)
-ggraph(g_tidy, layout = "fr") +  # "fr" pour layout de Fruchterman-Reingold
-  geom_edge_link(alpha = 0.4, colour = "steelblue") +
-  geom_node_point(color = "darkred", size = 2) +
-  geom_node_text(aes(label = name), repel = TRUE, size = 2) +
-  theme_void() +
-  ggtitle("Graphe complet des connexions entre stations de métro")
+# Supprimer les doublons
+df_clean <- unique(df[, c("Nom.de.la.Station", "Nom.de.la.ligne")])
+
+# Initialiser le tableau de connexions
+edges <- data.frame()
+
+# Pour chaque ligne créer les connexions station à station
+lignes <- unique(df_clean$Nom.de.la.ligne)
+
+for (ligne in lignes) {
+  stations <- unique(df_clean[df_clean$Nom.de.la.ligne == ligne, "Nom.de.la.Station"])
+  if (length(stations) >= 2) {
+    for (i in 1:(length(stations) - 1)) {
+      edges <- rbind(edges, data.frame(
+        station1 = stations[i],
+        station2 = stations[i + 1],
+        ligne = ligne,
+        stringsAsFactors = FALSE
+      ))
+    }
+  }
+}
+
+# Sauvegarder graphe_metro.csv
+write.csv(edges, "graphe_metro.csv", row.names = FALSE)
+# Charger la librairie
+library(igraph)
+
+# Lire le fichier CSV
+graph_data <- read.csv("graphe_metro.csv")
+
+# Créer le graphe orienté
+g <- graph_from_data_frame(graph_data[, c("station1", "station2")], directed = FALSE)
+V(g)$media <- V(g)$name
+
+# Layout avec espacement maximal sinon illisible 
+layout_fr <- layout_with_fr(g, niter = 5000, area = vcount(g)^3)
+
+# Export en png sinon j'arrive pas a voir dans plot le graph
+png("graphe_metro_lisible.png", width = 5000, height = 5000, res = 300)
+
+# Tracer le graphe avec options optimisées
+plot(g,
+     layout = layout_fr,
+     vertex.shape = "none",
+     vertex.label = V(g)$media,
+     vertex.label.font = 2,
+     vertex.label.color = "black",
+     vertex.label.cex = 0.6,        
+     edge.color = "gray85")
+
+# Fermeture du fichier image
+dev.off()
