@@ -68,7 +68,6 @@ library(igraph)
 graph_data <- read.csv("graphe_metro.csv")
 
 g <- graph_from_data_frame(graph_data[, c("station1", "station2")], directed = FALSE)
-V(g)$media <- V(g)$name
 
 layout_fr <- layout_with_fr(g, niter = 5000, area = vcount(g)^3)
 
@@ -78,7 +77,7 @@ png("graphe_metro_lisible.png", width = 5000, height = 5000, res = 300)
 plot(g,
      layout = layout_fr,
      vertex.shape = "none",
-     vertex.label = V(g)$media,
+     vertex.label = V(g)$name,
      vertex.label.font = 2,
      vertex.label.color = "black",
      vertex.label.cex = 0.6,        
