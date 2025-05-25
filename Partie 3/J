@@ -85,6 +85,9 @@ plot(signal_diffuse, type = "h", main = "Propagation de la pollution sur le grap
       # Points des stations aériennes
       geom_point(data = subset(pollution, niveau_pollution == "station aérienne"),
                  color = "red", size = 3) +
+      # Points des stations sans données
+      geom_point(data = subset(pollution, niveau_pollution == "pas de données"),
+                 color = "green", size = 3) +
       labs(title = "Carte des stations du métro : stations aériennes en rouge",
            x = "Longitude", y = "Latitude") +
       theme_minimal()
