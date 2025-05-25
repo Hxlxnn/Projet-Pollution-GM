@@ -81,6 +81,6 @@ plot(g,
      vertex.label.font = 2,
      vertex.label.color = "black",
      vertex.label.cex = 0.6,        
-     edge.color = "gray85")
+     edge.color = "gray")
 
 dev.off()
