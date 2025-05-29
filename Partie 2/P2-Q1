@@ -1,0 +1,1 @@
+ Le fichier csv fait 51 040 lignes que l’on a créées donc et on a proposé pour réduire sa taille simplement d’éliminer les lignes avec False car comme la colonne connect est constituée de booléens si on voit que la connexion n'existe pas sur le tableau on dit qu’elle est fausse simplement.
